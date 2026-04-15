@@ -18,3 +18,49 @@ NSIS（NullSoft）：使用 /S（大写）。‌
 实际使用时需根据安装程序类型选择参数，并注意参数大小写敏感性。若需进一步了解特定软件的参数，可参考其官方文档。
 
 
+
+
+
+Windows捆绑安装通常指使用Windows Installer技术打包的安装程序（如.msi文件），其核心安装参数基于msiexec命令。以下是常见参数说明：
+
+‌/i‌：指定要安装的.msi文件路径，例如 msiexec /i package.msi。‌
+‌/quiet‌ 或 ‌/qn‌：执行静默安装，无用户交互界面，直接后台安装。‌
+‌/passive‌ 或 ‌/qb‌：显示安装进度栏，但无需用户干预，适合无人值守场景。‌
+‌/norestart‌：安装完成后不自动重启计算机。‌
+‌/promptrestart‌：必要时提示用户重启。‌
+‌/forcerestart‌：安装后强制重启计算机。‌
+对于捆绑安装中的特定组件（如Visual C++ Redistributable或.NET Framework），可结合具体参数，例如：
+
+vcredist_x86.exe /q（静默安装32位运行库）。‌
+dotnetfx35.exe /quiet /norestart（静默安装.NET Framework 3.5）。‌
+如果安装程序基于其他打包工具（如InstallShield或Inno Setup），参数可能不同：
+
+InstallShield：使用 /s 或 -s 参数进行静默安装。‌
+Inno Setup：使用 /silent /norestart。‌
+NSIS（NullSoft）：使用 /S（大写）。‌
+实际使用时需根据安装程序类型选择参数，并注意参数大小写敏感性。若需进一步了解特定软件的参数，可参考其官方文档。
+
+
+
+
+
+Windows捆绑安装通常指使用Windows Installer技术打包的安装程序（如.msi文件），其核心安装参数基于msiexec命令。以下是常见参数说明：
+
+‌/i‌：指定要安装的.msi文件路径，例如 msiexec /i package.msi。‌
+‌/quiet‌ 或 ‌/qn‌：执行静默安装，无用户交互界面，直接后台安装。‌
+‌/passive‌ 或 ‌/qb‌：显示安装进度栏，但无需用户干预，适合无人值守场景。‌
+‌/norestart‌：安装完成后不自动重启计算机。‌
+‌/promptrestart‌：必要时提示用户重启。‌
+‌/forcerestart‌：安装后强制重启计算机。‌
+对于捆绑安装中的特定组件（如Visual C++ Redistributable或.NET Framework），可结合具体参数，例如：
+
+vcredist_x86.exe /q（静默安装32位运行库）。‌
+dotnetfx35.exe /quiet /norestart（静默安装.NET Framework 3.5）。‌
+如果安装程序基于其他打包工具（如InstallShield或Inno Setup），参数可能不同：
+
+InstallShield：使用 /s 或 -s 参数进行静默安装。‌
+Inno Setup：使用 /silent /norestart。‌
+NSIS（NullSoft）：使用 /S（大写）。‌
+实际使用时需根据安装程序类型选择参数，并注意参数大小写敏感性。若需进一步了解特定软件的参数，可参考其官方文档。
+
+
