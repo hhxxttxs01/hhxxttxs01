@@ -1,0 +1,5 @@
+label,expected,target
+empty string,TRUE,
+plain string,FALSE,hello
+try string,TRUE,001
+ONE CHAR,FALSE,002
